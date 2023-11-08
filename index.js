@@ -5,4 +5,8 @@ app.get('/', function(req, res) {
     res.send('Chico')
 })
 
-app.listen(3000)
+app.get('/oi', function(req, res){
+    res.send('ahhhh')
+})
+
+app.listen(3000, () => console.log("rodando"))
