@@ -34,4 +34,14 @@ app.post('/item', function(req, res) {
 
 })
 
+app.put('/item/:id', function(req, res) {
+    const id = req.params.id - 1
+
+    const novoItem = req.body.nome
+
+    list[id] = novoItem
+
+    res.send("Atualizado")
+})
+
 app.listen(3000, () => console.log("rodando"))
