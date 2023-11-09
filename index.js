@@ -44,4 +44,12 @@ app.put('/item/:id', function(req, res) {
     res.send("Atualizado")
 })
 
+app.delete('/item/:id', function(req, res) {
+    const id = req.params.id - 1
+
+    delete list[id]
+
+    res.send("Delete")
+})
+
 app.listen(3000, () => console.log("rodando"))
